@@ -24,7 +24,7 @@ export default {
     data(){
         return{
             textUserInput: '',
-            arrResponse: null,
+            arrResponse: [],
             resultCycle: 0,
         };
     },
@@ -38,8 +38,8 @@ export default {
         startSearchFunction(){
             axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT&query=' + this.textUserInput)
             .then((item) =>{
-                this.arrResponse = item.results[1].title
-            console.log(this.arrResponse)
+                this.arrResponse = item.data.results[this.resultCycle].title;
+                console.log(this.arrResponse);
             })
         }
     }
