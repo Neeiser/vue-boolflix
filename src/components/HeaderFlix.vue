@@ -32,8 +32,7 @@ export default {
         })
     },
     methods:{
-        startSearchFunction(argomento){
-            this.textUserInput = argomento.value;
+        startSearchFunction(){
         }
     }
 }
