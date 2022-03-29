@@ -5,9 +5,12 @@
       </div>
       <div>
           <input type="text" 
-          placeholder="Inserisci il nome:" name="searchInput" id="searchInput"
-          value="" v-model="textUserInput">
-          <button>Cerca</button>
+          placeholder="Inserisci il nome:" 
+          name="searchInput" 
+          id="searchInput" 
+          v-model="textUserInput">
+          <button @click="startSearchFunction"
+          >Cerca</button>
       </div>
   </header>
 </template>
@@ -23,8 +26,15 @@ export default {
         };
     },
     created(){
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT')
-        .then
+        axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT&query=' + textUserInput)
+        .then(() => {
+            
+        })
+    },
+    methods:{
+        startSearchFunction(argomento){
+            this.textUserInput = argomento.value;
+        }
     }
 }
 </script>
