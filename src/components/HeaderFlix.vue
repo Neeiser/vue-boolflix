@@ -17,13 +17,15 @@
 </template>
 
 <script>
-/* import axios from 'axios'; */
+import axios from 'axios';
 
 export default {
     name:'HeaderFlix',
     data(){
         return{
             textUserInput: '',
+            arrResponse: null,
+            resultCycle: 0,
         };
     },
     /* computed(){
@@ -34,7 +36,11 @@ export default {
     }, */
     methods:{
         startSearchFunction(){
-            console.log(this.textUserInput)
+            axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT&query=' + this.textUserInput)
+            .then((item) =>{
+                this.arrResponse = item.results[1].title
+            console.log(this.arrResponse)
+            })
         }
     }
 }
