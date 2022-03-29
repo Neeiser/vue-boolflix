@@ -1,13 +1,15 @@
 <template>
-  
+    <main>
+
+    </main>
 </template>
 
 <script>
 export default {
-
+    name:'MainFlix',
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
-</style>
+</style>>
