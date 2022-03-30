@@ -24,8 +24,6 @@ export default {
     data(){
         return{
             textUserInput: '',
-            arrResponse: [],
-            resultCycle: 0,
         };
     },
 }
