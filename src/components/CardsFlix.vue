@@ -1,6 +1,7 @@
 <template>
     <div class="card">
         <img :src="imgPath" alt="">
+        <!-- <img :src="backupImgPath" alt=""> --> <!-- Mi serve per dopo -->
         <h2>{{filmElement.title}}</h2>
         <h3>{{filmElement.original_title}}</h3>
         <small>{{filmElement.original_language}}</small>
@@ -13,12 +14,13 @@ export default {
     name:'CardsFlix',
     data(){
         return{
-            imgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.poster_path
+            imgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.poster_path,
+            /* backupImgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.backdrop_path */  /* Mi serve per dopo */
         }
     },
     props:{
     filmElement: Object,
-  },
+    },
 }
 </script>
 
