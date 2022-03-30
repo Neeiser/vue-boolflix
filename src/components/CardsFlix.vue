@@ -1,5 +1,6 @@
 <template>
     <div class="card">
+        <img :src="imgPath" alt="">
         <h2>{{filmElement.title}}</h2>
         <h3>{{filmElement.original_title}}</h3>
         <small>{{filmElement.original_language}}</small>
@@ -10,6 +11,11 @@
 <script>
 export default {
     name:'CardsFlix',
+    data(){
+        return{
+            imgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.poster_path
+        }
+    },
     props:{
     filmElement: Object,
   },
@@ -24,11 +30,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
-    width: 200px;
-    small{
-
+    height: 600px;
+    width: 300px;
+    img{
+        width: 200px;
     }
 }
 
-</style>>
+</style>

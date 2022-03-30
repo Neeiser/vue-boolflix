@@ -23,11 +23,11 @@ export default {
   },
   methods:{
     searchFunction(argText){
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT&query=' + argText)
-        .then((item) =>{
-            this.arrFilms = item.data.results;
-            console.log(this.arrFilms);
-        })
+      axios.get('https://api.themoviedb.org/3/search/movie?api_key=2a1eafb77e5173892c5f55c2d7d7a8c8&language=it-IT&query=' + argText)
+      .then((item) =>{
+          this.arrFilms = item.data.results;
+          console.log(this.arrFilms);
+      })
     }
   }
 }
