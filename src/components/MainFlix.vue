@@ -14,6 +14,9 @@ export default {
     name:'MainFlix',
     components:{
         CardsFlix,
+    },
+    props:{
+        arrFilms: Array
     }
 }
 </script>
