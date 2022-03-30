@@ -1,26 +1,21 @@
 <template>
     <main>
-        <div class="card"
-        v-for="(film, index) in arrFilms" 
-        :key="index">
-            <h2>{{film.title}}</h2>
-        </div>
+        <CardsFlix>
+        </CardsFlix>
     </main>
 </template>
 
 <script>
+import CardsFlix from './CardsFlix.vue'
+
 export default {
     name:'MainFlix',
-    props:{
-    arrFilms: Object,
-  },
+    components:{
+        CardsFlix,
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
-.card{
-    background-color: lightblue;
-}
 
 </style>>
