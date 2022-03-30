@@ -2,7 +2,8 @@
     <main>
         <CardsFlix
         v-for="film in arrFilms"
-        :key="film">
+        :key="film.id"
+        :filmElement="film">
         </CardsFlix>
     </main>
 </template>

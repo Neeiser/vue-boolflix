@@ -10,7 +10,7 @@
 export default {
     name:'CardsFlix',
     props:{
-    arrFilms: Object,
+    filmElement: Object,
   },
 }
 </script>

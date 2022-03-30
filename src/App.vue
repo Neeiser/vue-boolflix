@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderFlix @search="searchFunction"></HeaderFlix>
-    <MainFlix></MainFlix>
+    <MainFlix :arrFilms="arrFilms"></MainFlix>
   </div>
 </template>
 
