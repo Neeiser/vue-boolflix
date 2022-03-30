@@ -1,6 +1,8 @@
 <template>
     <main>
-        <CardsFlix>
+        <CardsFlix
+        v-for="film in arrFilms"
+        :key="film">
         </CardsFlix>
     </main>
 </template>
