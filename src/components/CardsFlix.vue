@@ -4,7 +4,12 @@
         <!-- <img :src="backupImgPath" alt=""> --> <!-- Mi serve per dopo -->
         <h2>{{filmElement.title}}</h2>
         <h3>{{filmElement.original_title}}</h3>
-        <img id="flagPoster" :src="langFlag">
+        <img id="flagPoster"
+        v-if="this.filmElement.original_language === 'en'"
+        :src='langFlagFix'>
+        <img id="flagPoster"
+        v-else
+        :src='this.langFlag'>
         <small>{{filmElement.vote_average}}</small>
     </div>
 </template>
@@ -15,6 +20,7 @@ export default {
     data(){
         return{
             langFlag: 'https://countryflagsapi.com/png/' + this.filmElement.original_language,
+            langFlagFix: 'https://countryflagsapi.com/png/us',
             imgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.poster_path,
             /* backupImgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.backdrop_path */  /* Mi serve per dopo */
         }
