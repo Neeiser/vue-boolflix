@@ -6,6 +6,7 @@
         <div class="film-info">
             <h2>{{filmElement.title}}</h2>
             <h3>{{filmElement.original_title}}</h3>
+            <small id="film-desc">{{filmElement.overview}}</small>
             <small>{{filmElement.vote_average}}</small>
         </div>
         <img id="flagPoster"
@@ -64,16 +65,23 @@ export default {
         h3{
             font-size: 0.8rem;
         }
+        #film-desc{
+            text-align: center;
+        }
     }
     #flagPoster{
         width: 50px;
+        border-radius: 5px;
         position: absolute;
-        top:0;
-        left:0;
+        top: 5px;
+        left: 5px;
     }
 }
 
 .card:hover{
+    .film-poster{
+    display: none;
+    }
     #imgPoster{
         height: 0px;
         transition: 0.3s;
@@ -82,6 +90,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
         height: 450px;
         background-color: white;
     }
