@@ -41,11 +41,15 @@ export default {
     align-items: center;
     height: 600px;
     width: 300px;
+    position: relative;
     #imgPoster{
         width: 200px;
     }
     #flagPoster{
         width: 50px;
+        position: absolute;
+        top:0;
+        left:0;
     }
 }
 
