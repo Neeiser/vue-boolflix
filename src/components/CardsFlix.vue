@@ -27,7 +27,6 @@ export default {
             langFlag: 'https://countryflagsapi.com/png/' + this.filmElement.original_language,
             langFlagFix: 'https://countryflagsapi.com/png/us',
             imgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.poster_path,
-            /* backupImgPath: 'https://image.tmdb.org/t/p/w500' + this.filmElement.backdrop_path */  /* Mi serve per dopo */
         }
     },
     props:{
@@ -91,8 +90,10 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        padding: 10px;
         height: 450px;
-        background-color: white;
+        width: 298px;
+        background-color: lightgray;
     }
 }
 
