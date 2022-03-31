@@ -4,14 +4,12 @@
             <h1>BOOLFLIX</h1>
         </div>
         <div>
-            <input type="text" 
+            <input type="text"
+            @keyup.enter="$emit('search', textUserInput)"
             placeholder="Inserisci il nome:" 
             name="searchInput" 
             id="searchInput" 
             v-model="textUserInput">
-            <button @click="$emit('search', textUserInput)">
-                Cerca
-            </button>
         </div>
     </header>
 </template>
@@ -42,6 +40,10 @@ header{
     padding: 0px 20px;
     h1{
         color: $redFlix;
+    }
+    #searchInput{
+        height: 50px;
+        padding: 5px;
     }
 }
 </style>
